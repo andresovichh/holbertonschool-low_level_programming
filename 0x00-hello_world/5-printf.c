@@ -1,4 +1,9 @@
 #include <stdio.h>
+/**
+ * main -tatat
+ * Return: always 0
+ *
+ */
 
 int main(void)
 {
