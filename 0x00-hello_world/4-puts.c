@@ -3,6 +3,6 @@
 
 int main(void)
 {
-	int puts(const char "Programming is like building a multilingual puzzle\n");
+	int puts(const char ,"Programming is like building a multilingual puzzle\n");
 	return (0);
 }
