@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <time.h>
 /*
- * main - Tdasdasdasd
+ * int main - Tdasdasdasd
  * Return: always zero
  */
-int main (void) /*this is a function*/
+int main(void) /*this is a function*/
 {
 	int n;
 
