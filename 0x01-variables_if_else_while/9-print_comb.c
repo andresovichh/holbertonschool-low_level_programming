@@ -12,7 +12,8 @@ int main(void)
 	for (ch = 48; ch <= 56; ch++)
 	{
 		putchar(ch);
-		putchar(',');
+		putchar(32);
+		putchar(44);
 	}
 	putchar(57);
 		putchar('\n');
