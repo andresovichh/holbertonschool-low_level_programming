@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/*
- * main - Tdasda sdasd
- *
- * Return: always zero
+/**
+ * main - ttas sfas
+ * Return: always 0
  */
-int main(void) /*this is a function*/
+
+int main(void)
 {
 	int n;
 
@@ -14,10 +14,10 @@ int main(void) /*this is a function*/
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
 if (n == 0)
-printf("%d is zero\n", n);
+	printf("%d is zero\n", n);
 else if (n < 0)
-printf("%d is negative\n", n);
-else 
+	printf("%d is negative\n", n);
+else
 	printf("%d is positive\n", n);
 return (0);
 }
