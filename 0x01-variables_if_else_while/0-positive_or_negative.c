@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 /*
- * int main - Tdasdasdasd
+ * main - Tdasda sdasd
+ *
  * Return: always zero
  */
 int main(void) /*this is a function*/
@@ -16,7 +17,6 @@ if (n == 0)
 printf("%d is zero\n", n);
 else if (n < 0)
 printf("%d is negative\n", n);
-else 
-printf("%d is positive\n", n);
+else printf("%d is positive\n", n);
 return (0);
 }
