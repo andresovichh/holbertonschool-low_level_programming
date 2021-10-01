@@ -7,14 +7,14 @@
  */
 int main(void)
 {
-	char ch;
+	int ch;
 
-	for (ch = '0'; ch <= '8'; ch++)
+	for (ch = 48; ch <= 56; ch++)
 	{
 		putchar(ch);
 		putchar(',');
 	}
-	putchar('9');
+	putchar(57);
 		putchar('\n');
 	return (0);
 }
