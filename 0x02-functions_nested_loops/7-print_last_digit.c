@@ -1,23 +1,22 @@
 #include "main.h"
-
 /**
- * print_last_digit - check the code.
- * @i: dasdas
- * Return: Always 0.
- */
-
-int print_last_digit(int i)
+  * print_last_digit - prints last digit
+  * @num: number to be checked
+  * Return: last digit
+  */
+int print_last_digit(int num)
 {
-	if (i >= 10)
-	{
-	int last = (i / 10) % 10;
+	int a;
 
-	return (last);
+	if (num < 0)
+		num = -num;
 
-	}
-	else
-	{
-	return (i);
-	}
+	a = num % 10;
 
+	if (a < 0)
+		a = -a;
+
+	_putchar(a + 48);
+
+	return (a);
 }
