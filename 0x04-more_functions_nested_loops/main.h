@@ -1,3 +1,4 @@
+void print_diagonal(int n);
 void print_line(int n);
 int _isupper(int c);
 int _isdigit(int c);
