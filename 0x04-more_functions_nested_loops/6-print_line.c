@@ -1,13 +1,9 @@
 #include "main.h"
-
 /**
- * print_line - easdasd
- *
- * Return: Always 0
- *
- * @n: das
- */
-
+  * print_line - draws a straight line with length "n", followed by a new line
+  * @n: input for length of the line
+  * Return: void
+  */
 void print_line(int n)
 {
 	int i;
@@ -16,9 +12,8 @@ void print_line(int n)
 	{
 		for (i = 0; i < n; i++)
 		{
-		_putchar('_');
+			_putchar('_');
 		}
 	}
-	_putchar('_');
-
+	_putchar('\n');
 }
