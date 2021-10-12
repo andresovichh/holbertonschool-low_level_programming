@@ -11,14 +11,13 @@
 
 int _strlen(char *s)
 {
-	int total = 0;
+	int i;
 
-	for (total = 0; total <= *s; total++)
+	for (i = 0; i <= *s; i++)
 	{
-		total = total + 1;
+		i = i + 1;
 	}
-	return (total);
-
+	return (i);
 
 
 
