@@ -12,11 +12,13 @@
 
 void _puts(char *str)
 {
-	int c;
+	int c = 0;
+
+	c = str[c];
 
 	for (c = 0; str[c] <= '\n'; c++)
 	{
-		_putchar(str[c]);
+		_putchar(c);
 	}
 	_putchar('\n');
 
