@@ -2,11 +2,10 @@
 
 /**
  * swap_int - dasdasd
+ * @b: dsad
  *
- * @tmp,a,b: dasdads
- *
+ * @a: dasdas
  * Return: Always 0
- * @b: dasd
  *
  *
  */
