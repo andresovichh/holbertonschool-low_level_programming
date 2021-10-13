@@ -32,9 +32,9 @@ void rev_string(char *s)
 	{
 
 		tmp = s[j];
-		s[j] = s[l - j];
+		s[j] = s[l - j - 1];
 
-		s[l - j] = tmp;
+		s[l - j - 1] = tmp;
 	}
 
 
