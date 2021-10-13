@@ -1,11 +1,9 @@
 #include <stdio.h>
 
 /**
- *
  * rev_string - reverses a string
  *
- * @len: length of string
- *
+ * @s: length of string
  *
  * Return: Always 0
  *
@@ -13,7 +11,8 @@
 
 void rev_string(char *s)
 {
-	int len, i, tmp = 0;
+	int len, i = 0;
+	char tmp;
 
 	while (s[len] != '\0')
 	{
@@ -21,7 +20,7 @@ void rev_string(char *s)
 	}
 
 
-	for (i = 0; i <= (len / 2); i++)
+	for (i = 0; i < (len / 2); i++)
 	{
 
 		tmp = s[i];
