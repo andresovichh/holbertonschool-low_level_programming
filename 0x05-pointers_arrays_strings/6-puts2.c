@@ -19,7 +19,14 @@ void puts2(char *str)
 
 	for (i = 0; i <= l; i++)
 	{
-		if (i % 2)
+		if (i == 0)
+		{
+		}
+		else if (i == 1)
+		{
+			_putchar(str[i]);
+		}
+		else if (i % 2)
 		{
 		}
 		else
