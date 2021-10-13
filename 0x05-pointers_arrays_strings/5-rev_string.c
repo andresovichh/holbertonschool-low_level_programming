@@ -14,10 +14,19 @@ void rev_string(char *s)
 	int i, l, j = 0;
 	char tmp;
 
+	/**
+	* for (i = 0; s[i] != '\0'; i++)
+	* {
+	* l = i++;
+	* }
+	*/
+
+
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		l = i++;
 	}
+
 
 	for (j = 0; j <= (l / 2); j++)
 	{
@@ -27,6 +36,7 @@ void rev_string(char *s)
 
 		s[l - j] = tmp;
 	}
+
 
 
 
