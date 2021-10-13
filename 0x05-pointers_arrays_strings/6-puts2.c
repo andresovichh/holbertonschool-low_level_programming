@@ -26,7 +26,7 @@ void puts2(char *str)
 		{
 			_putchar(str[i]);
 		}
-		else if (i % 2)
+		else if ((i % 2) && i != (1 || 0))
 		{
 		}
 		else
