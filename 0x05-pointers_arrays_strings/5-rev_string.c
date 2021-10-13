@@ -19,17 +19,13 @@ void rev_string(char *s)
 		l = i++;
 	}
 
-	for (i = 0; i < (l / 2); i++)
+	for (i = 0; i < ((l + 1) / 2); i++)
 	{
 
 		tmp = s[i];
+		s[i] = s[l - 1 -  i];
 
-		s[i] = s[l - 1];
-
-		s[l - 1] = tmp;
-
-		i++;
-		l--;
+		s[l - 1 - i] = tmp;
 	}
 
 
