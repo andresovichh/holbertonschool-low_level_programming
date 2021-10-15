@@ -3,30 +3,22 @@
 /**
  * cap_string - Makes lower, uppercase
  *
- * @str: a string
+ * @s: a string
  *
  * Return: multiple returns
  *
  */
 
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
 	int i = 0;
 
-	for (i = 0;  str[i] != '\0'; i++)
+	if (s[i] == ',' || ' ' || ';' ||
+		       	'.' || '!' || '?' || '(' || ')' || '{' || '}' && (s[i] < 90 
+			&& s[i] > 65)
 	{
-
-		if (str[i] < 123 && str[i] > 96)
-		{
-			if (str[i] = (','; ';', '.', '!', '?', '"', '(', ')', '{', '}'))
-					{
-						str[i] = str[i] - 32;
-						continue;
-					}
-					else
-					{
-					}
-
+		s[i] = s[i] - 32;
 	}
-return (str);
+
+return (0);
 }
