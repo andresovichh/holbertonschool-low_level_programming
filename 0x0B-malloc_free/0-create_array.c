@@ -1,10 +1,10 @@
 #include "main.h"
 #include <stdio.h>
-#include <stdlib>
+#include <stdlib.h>
 
 
 /**
- * create_array - Function that creates an array of chars and initializes it with a specific char.
+ * create_array - rray of chars and initializes it with a specific char.
  *
  * @size: The size of the char array
  * @c: the actual char
@@ -18,7 +18,7 @@ char *create_array(unsigned int size, char c)
 	unsigned int i = 0;
 	char *mal;
 
-	mal = malloc(sizeof(c)*size);
+	mal = malloc(sizeof(c) * size);
 
 
 	if (mal == 0 || size <= 0)
@@ -33,5 +33,6 @@ char *create_array(unsigned int size, char c)
 		}
 	}
 
-	return (mal)
+	return (mal);
+}
 
