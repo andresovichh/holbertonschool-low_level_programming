@@ -19,6 +19,9 @@ char *_strdup(char *str)
 	int i, j;
 	char *new_str;
 
+	if (str == NULL)
+		return (0);
+
 	for (i = 0; str[i] != 0; i++)
 	{
 	}
@@ -27,7 +30,7 @@ char *_strdup(char *str)
 	/** The +1 is there because the counter wont measure null*/
 	new_str = malloc((sizeof(char) * i) + 1);
 
-	if (str == NULL || new_str == NULL)
+	if (new_str == NULL)
 		return (NULL);
 
 	for (j = 0; j <= i; j++)
