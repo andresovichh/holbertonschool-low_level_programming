@@ -24,20 +24,18 @@ char *_strdup(char *str)
 	}
 
 	/** Here I get the length of str as the value of i*/
+	/** The +1 is there because the counter wont measure null*/
+	new_str = malloc((sizeof(char) * i) + 1);
 
-
-	new_str = malloc(sizeof(char) * i);
-
-	if (*new_str > 0)
-	{
-		for (j = 0; j <= i; j++)
-		{
-			new_str[j] = str[j];
-		}
-	}
-	else
+	if (str == NULL || new_str == NULL)
 		return (NULL);
-return (0);
+
+	for (j = 0; j <= i; j++)
+	{
+		new_str[j] = str[j];
+	}
+	new_str[j + 1] = 0;
+	return (new_str);
 }
 
 
