@@ -42,7 +42,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		new_s[k] = s1[k];
 	}
-	for (k = i; k <= (i + n); k++)
+	for (k = i; k <= (i + n) && n < j; k++)
+	{
+		new_s[k] = s2[l];
+		l++;
+	}
+	for (k = i; k <= (i + j) && n >= j; k++)
 	{
 		new_s[k] = s2[l];
 		l++;
