@@ -22,7 +22,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-
 	/** Measure both strings*/
 	for (i = 0; s1[i] != 0; i++)
 	{
@@ -31,10 +30,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 	}
 	if (n >= j)
+	{
 		new_s = malloc(sizeof(char) * (i + j + 1));
+	}
 	else
+	{
 		new_s = malloc(sizeof(char) * (i + n + 1));
-
+	}
 	if (new_s == NULL)
 		return (NULL);
 	/** Concatenate strings*/
