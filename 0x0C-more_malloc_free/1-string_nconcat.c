@@ -30,10 +30,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (j = 0; s2[j] != 0; j++)
 	{
 	}
-	if (n > j)
-		n = j;
-	/** Allocate memory for both strings*/
-	new_s = malloc(sizeof(char) * (i + n + 1));
+	if (n >= j)
+		new_s = malloc(sizeof(char) * (i + j + 1));
+	else
+		new_s = malloc(sizeof(char) * (i + n + 1));
 
 	if (new_s == NULL)
 		return (NULL);
