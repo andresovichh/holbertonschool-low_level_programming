@@ -30,7 +30,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (j = 0; s2[j] != 0; j++)
 	{
 	}
-	if (n >= j)
+	if (n > j)
 		n = j;
 	/** Allocate memory for both strings*/
 	new_s = malloc(sizeof(char) * (i + n + 1));
@@ -47,7 +47,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		new_s[k] = s2[l];
 		l++;
 	}
-	new_s[k] = 0;
 
 	return (new_s);
 }
