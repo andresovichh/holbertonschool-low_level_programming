@@ -16,5 +16,7 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	(*f)(name);
+	/**  name and char* have to exist*/
+	if (name && f)
+		(*f)(name);
 }
