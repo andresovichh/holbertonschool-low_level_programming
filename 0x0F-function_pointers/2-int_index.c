@@ -18,11 +18,6 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 		for (iter = 0; iter < size; iter++)
 		{
 			(*action)(array[iter]);
-			/** function is called by pointer *action.
-			 * then, the argument or input for pointer 
-			 * of function *action is the actual array
-			 * moving along the array.
-			 */
 		}
 
 
