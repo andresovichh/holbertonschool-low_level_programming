@@ -8,15 +8,10 @@
  * @f: pointer to func char
  */
 
-/**
- * When called in main, f points to the result
- * of the function that is called which returns
- * a string, and that is why char* is used.
- */
 
 void print_name(char *name, void (*f)(char *))
 {
 	/**  name and char* have to exist*/
 	if (name && f)
-		f(name);
+		(*f)(name);
 }
