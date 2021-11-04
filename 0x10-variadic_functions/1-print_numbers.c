@@ -15,6 +15,15 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	for (i = 0; i < n; i++)/** Run through the list*/
 	{
+		/** Should I check if incoming is an unisgned in? */
+		/**
+		 * if (typeof(va_start(ap,n) == unsigned int))
+		 *
+		 *
+		 *
+		 *
+		 *
+		 */
 		printf("%d", va_arg(ap, unsigned int)); /** Print each iteration*/
 		if (separator != NULL)/** Print separator only if exists*/
 		{
