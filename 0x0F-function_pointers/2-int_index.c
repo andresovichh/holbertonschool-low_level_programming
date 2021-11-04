@@ -3,22 +3,24 @@
 #include <stdlib.h>
 
 /**
- * array_iterator - array iterator
+ * int_index - returns index of coincidence
  * @array: an array
  * @size: size of the array
- * @action: mdasd
- *
+ * @cmp: Ptr to function that checks for coincidence
+ * Return: Returns the index of the coincidence if succesful
  */
-
-void array_iterator(int *array, size_t size, void (*action)(int))
+int int_index(int *array, int size, int (*cmp)(int))
 {
-	unsigned int iter;
-	/** all arguments must exist*/
-	if (array && action && size)
-		for (iter = 0; iter < size; iter++)
-		{
-			(*action)(array[iter]);
-		}
+	int i = 0;
+
+	if (size <= 0)
+		return (-1);
+	for (i = 0; i <= size; i++)
+	{
+		if ((*cmp)(array[i]) != 0)
+			return (i);
+	}
+	return (-1);
 
 
 
