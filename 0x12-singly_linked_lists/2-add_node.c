@@ -25,10 +25,10 @@ list_t *add_node(list_t **head, const char *str)
 
 	other_list->str = strdup(str);
 	other_list->len = i;
-	/** use ptr because you need to move to where it is pointing*/
-	other_list->next = (*head);
-	(*head) = other_list;
+	other_list->next = *head;
+
+	*head = other_list;
+
 	return (other_list);
-
-
 }
+
