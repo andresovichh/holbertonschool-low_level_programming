@@ -28,7 +28,7 @@ list_t *add_node(list_t **head, const char *str)
 	/** use ptr because you need to move to where it is pointing*/
 	other_list->next = (*head);
 	(*head) = other_list;
-	return (*head);
+	return (other_list);
 
 
 }
