@@ -12,7 +12,7 @@ list_t *add_node(list_t **head, const char *str)
 {
 	/** Create new lis*/
 	list_t *other_list;
-
+	char *new_s = strdup(str);
 	int i = 0;
 
 	/** Measure str*/
@@ -24,12 +24,11 @@ list_t *add_node(list_t **head, const char *str)
 	if (!other_list || !strdup(str))
 		return (NULL);
 
-	other_list->str = strdup(str);
+	other_list->str = new_s;
 	other_list->len = i;
 	other_list->next = *head;
 
 	*head = other_list;
-
 	return (other_list);
 }
 
