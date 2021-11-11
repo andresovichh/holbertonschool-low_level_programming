@@ -9,41 +9,26 @@
 
 list_t *add_node(list_t **head, const char *str)
 {
-	unsigned int l;
-	/** create vars*/
-	char *new_str;/* I need this because I need to change to where it points*/
-	/** 1. Allocate node*/
-	list_t *new_node;
+	/** Create new lis*/
+	list_t *other_list;
 
-	new_node = malloc(sizeof(list_t));
+	int i = 0;
 
-	if (new_node == NULL)
+	/** Measure str*/
+
+	for (i = 0; str[i] != 0; i++)
+	/** Reserve memory*/
+	other_list = malloc(sizeof(list_t));
+
+	if (!other_list)
 		return (NULL);
 
-	/** 1.1. Duplicate str*/
-
-	new_str = strdup(str);
-	if (new_str == NULL)
-	{
-		free(new_node);
-		return (NULL);
-	}
-
-	for (l = 0; str[l] != 0; l++)
+	other_list->str = strdup(str);
+	other_list->len = i;
+	/** use ptr because you need to move to where it is pointing*/
+	other_list->next = (*head);
+	(*head) = other_list;
+	return (*head);
 
 
-	/** 2. put in the data*/
-	new_node->str = new_str;
-
-	/** 3. Make next of new node as head*/
-	new_node->len = l;
-	new_node->next = (*head);
-
-	/** 4. move the head to pint to the new node*/
-
-	(*head) = new_node;
-
-
-
-return (0);
 }
