@@ -36,9 +36,8 @@ list_t *add_node(list_t **head, const char *str)
 	new_node->str = new_str;
 
 	/** 3. Make next of new node as head*/
-
-	new_node->next = (*head);
 	new_node->len = l;
+	new_node->next = (*head);
 
 	/** 4. move the head to pint to the new node*/
 
