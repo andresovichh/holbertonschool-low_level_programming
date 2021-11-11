@@ -21,7 +21,7 @@ list_t *add_node(list_t **head, const char *str)
 	/** Reserve memory*/
 	other_list = (list_t *)malloc(sizeof(list_t));
 
-	if (!other_list)
+	if (!other_list || !strdup(str))
 		return (NULL);
 
 	other_list->str = strdup(str);
