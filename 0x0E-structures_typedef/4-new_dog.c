@@ -11,15 +11,20 @@
  * struct new_dog - dasd
  */
 
+
+
+
+
+
+
 dog_t *new_dog(char *name, float age, char *owner)
-{
-	struct new_dog
-	{
-		char *name;
-		char *owner;
-		float age;
-	}
-	new_dog->name = dog->name;
-}	
+{	
+	(*dog_t).new_dog->name = name;
+	new_dog.owner = owner;
+	else
+		return (NULL);
+return (0);
+}
+
 
 
