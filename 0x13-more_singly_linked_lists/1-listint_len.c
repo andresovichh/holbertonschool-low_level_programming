@@ -1,10 +1,10 @@
+
 #include "lists.h"
-#include <strings.h>
-#include <stddef.h>
+
 /**
- * listint_len - returns nmbr of elements in a linked list
- * @h: lists
- * Return: nmbr of elements in a linked list
+ * listint_len - print the number of elements
+ * @h:lsit
+ * Return: number of elements
  */
 
 size_t listint_len(const listint_t *h)
