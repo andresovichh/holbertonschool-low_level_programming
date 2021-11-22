@@ -9,32 +9,30 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int fd, w;
-
-	unsigned int len = 0;
-
-	while (text_content)
-		len++;
+	int fd, w, len = 0;
 
 	/** check if filename exists and truncate*/
-	if (filename)
-	{
-		fd = open(filename, O_TRUNC);
-		w = write(fd, text_content, len);
-		close(fd);
-		close(w);
-	}
-	else if (filename == NULL)
-	{
+	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+
+	if (!fd)
 		return (-1);
-	}
-	else if (!filename)
+
+	if (text_content)
 	{
-		fd =
+		/** measure string */
+		while (text_content[len])
+			len++;
+
+		/** actually write */
+		w = write(fd, text_content, len);
+		if (w != len)
+			return (-1);
 
 
+	}
+	close(fd);
 
-
+	return (0);
 
 
 
