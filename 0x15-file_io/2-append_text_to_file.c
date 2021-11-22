@@ -20,7 +20,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	/** OPEN, READ ONLY AND APPEND*/
 	fd = open(filename, O_WRONLY | O_APPEND);
 
-	if(!fd)
+	if (!fd)
 		return (-1);
 
 	/** if text_content  exists, measure its length*/
@@ -38,5 +38,5 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	close(fd);
 
-	return(0);
+	return (0);
 }
