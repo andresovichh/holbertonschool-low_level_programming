@@ -19,5 +19,11 @@ it can be set to up to 2^22, which is aproximately 4 million.
 (PID_MAX_LIMIT, aprox 4 M).
 You can read proc(5) man page.
 
+--------------------------------------------------------------
+0x03-prt_wo_ac.c: Prints the arguments that come after 
+the user calls the program. Eg. "./prtwo 1 2 3" will prt
+1
+2
+3
 
-
+--------------------------------------------------------------
