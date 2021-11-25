@@ -5,6 +5,10 @@
 #include <string.h>
 #include <stdlib.h>
 
-
+typedef struct tok 
+{
+	char token;
+	unsigned int *ptr;
+} tok;
 
 #endif
