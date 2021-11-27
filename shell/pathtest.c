@@ -40,6 +40,29 @@ int main(int ac, char **av)
 			printf(" FOUND in %s\n", cwd);
 			printf("\n File st_uid %d \n", st.st_uid);
 			printf("\n File type and mode: %o\n", st.st_mode);
+			switch (st.st_mode & S_IFMT)
+			{
+				case S_IFREG:
+					puts("|| regular file");
+					break;
+				case S_IFCHR:
+					puts("|| character device");
+					break;
+				case S_IFBLK:
+					puts("|| block device");
+					break;
+				case S_IFLNK:
+					puts("|| symbolic link");
+					break;
+				case S_IFIFO:
+					puts("|| pipe");
+					break;
+				case S_IFSOCK:
+					puts("|| socket");
+					break;
+				default:
+					puts("|| unknown");
+													}
 			printf("\n Group ID of Owner: %d\n", st.st_gid);
 
 		}

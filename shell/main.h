@@ -7,6 +7,7 @@
 #include <string.h>
 #include <stdlib.h>
 
+extern char **environ;
 typedef struct tok 
 {
 	char token;
