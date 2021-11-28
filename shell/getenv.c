@@ -5,7 +5,6 @@
  * @name: name of the variable
  * Return: pointer to corresponding value string
  */
-
 char *_getenv(const char *name)
 {
 
@@ -34,10 +33,5 @@ char *_getenv(const char *name)
 	}
 	return (0);
 
-}
-int main(void)
-{
-	_getenv();
-	return (0);
 }
 
