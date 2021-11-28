@@ -37,8 +37,7 @@ char *_getenv(const char *name)
 }
 int main(void)
 {
-	_getenv("LANG");
-	_getenv("PATH");
+	_getenv();
 	return (0);
 }
 

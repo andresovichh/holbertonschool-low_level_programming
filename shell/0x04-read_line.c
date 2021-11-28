@@ -20,7 +20,7 @@ int main(void)
 	printf("$ ");
 	getline(&input, &buff, stdin);
 	printf("%s", input);
-
+	free(input);
 	return (0);
 
 }
