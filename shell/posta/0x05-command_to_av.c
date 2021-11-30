@@ -7,7 +7,7 @@
  *
  *
  */
-int main(void)
+int **cmd_to_av(char *input_string )
 {
 	char **result;
 	char *buffer = malloc(1024);
@@ -16,6 +16,11 @@ int main(void)
 
 	int i = 0;
 
+	/** first, check if input_string exists*/
+	if(!input_string)
+		return (NULL);
+
+	/** second, :21
 	result = malloc(sizeof(char));
 
 	while (1)

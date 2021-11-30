@@ -17,7 +17,7 @@
 #include <errno.h>
 char *_getenv(const char *name);
 extern char **environ;
-
+int **cmd_to_av(char *input_string);
 /**
  * struct list_s - singly linked list
  * @str: string - (malloc'ed string)
