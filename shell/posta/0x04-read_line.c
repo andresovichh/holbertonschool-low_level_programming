@@ -14,24 +14,20 @@ char *_getline(void)
 	 * allocate a buffer to store the line.
 	 */
 	size_t buff = 0;
-
+	int line = 0;
 	char *input =  NULL;
 
-		printf("$ ");
-		getline(&input, &buff, stdin);
-		if (strcmp(input, "^D") != 0)
-		{
-			printf("End of file, no errors");
-			return (0);
-		}
-
+	printf("$ ");
+	line = getline(&input, &buff, stdin);
+	/**
+	 * As per man getline, if error or if EOF,
+	 * getline returns -1
+	 * We should check if erno == 0
+	 * which means that there was not an error, ut EOF
+	 */
+	if (line <= 0)
+		return (NULL);
 	printf("%s", input);
-	free(input);
 	return (input);
 }
 
-int main(void)
-{
-	_getline();
-	return (0);
-}
