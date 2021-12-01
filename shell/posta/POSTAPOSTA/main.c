@@ -7,8 +7,14 @@
  */
 int main(void)
 {
-	char *a_pointer = "hello/:world/good:bye";
+	int i = 0;
+	char str[] = "hello/ :world /good: bye";
+	char **toks;
 
-	tokenizator(a_pointer);
+	toks = tokenizer(str);
+	while (toks[i])
+	{
+		printf("%s\n", toks[i++]);
+	}
 	return (0);
 }
