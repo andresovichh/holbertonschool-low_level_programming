@@ -14,7 +14,7 @@
 #include <sys/wait.h>
 #include <errno.h>
 #define BUFFER 1024
-char **tokenizator(char *ptr);
+char **tokenizer(char *ptr);
 char *_getenv(const char *name);
 extern char **environ;
 int **cmd_to_av(char *input_string);
