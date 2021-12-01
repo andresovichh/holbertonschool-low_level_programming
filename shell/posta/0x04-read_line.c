@@ -6,7 +6,7 @@
  *
  *
  */
-int main(void)
+char *_getline(void)
 {
 	/**
 	 * as per man 3 getline, you set the ptr to
@@ -17,10 +17,21 @@ int main(void)
 
 	char *input =  NULL;
 
-	printf("$ ");
-	getline(&input, &buff, stdin);
+		printf("$ ");
+		getline(&input, &buff, stdin);
+		if (strcmp(input, "^D") != 0)
+		{
+			printf("End of file, no errors");
+			return (0);
+		}
+
 	printf("%s", input);
 	free(input);
-	return (0);
+	return (input);
+}
 
+int main(void)
+{
+	_getline();
+	return (0);
 }

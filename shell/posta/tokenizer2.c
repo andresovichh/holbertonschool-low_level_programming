@@ -2,43 +2,31 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define LSH_TOK_BUFSIZE 64
-#define LSH_TOK_DELIM " \t\r\n\a"
 char **tokenizer(char *line)
 {
 	int bufsize = 1024, position = 0;
-	char **token_array;
-	char *token;
-
+	char **token_array; /**to store all the tokens*/
+	char *token; /** to store each token*/
+	/** allocate mem for the array, and check if it worked*/
 	token_array = malloc(bufsize * sizeof(char *));
-
 	if (!token_array)
-	{
-		fprintf(stderr, "lsh: allocation error\n");
+	{ /**per man exit, you call EXIT_FAILURE*/
 		exit(EXIT_FAILURE);
 	}
 
-	token = strtok(line, " \t\r\n\a");
-	while (token != NULL)
+	token = strtok(line, " \t\r\n\a");/**the assign the first token*/
+	while (token != NULL) /** the walk the string and store tokens in array*/
 	{
 		token_array[position] = token;
 		position++;
-
-		if (position >= bufsize)
-		{
-			bufsize += LSH_TOK_BUFSIZE;
-			token_array = realloc(token_array, bufsize * sizeof(char *));
-			if (!token_array)
-			{
-				fprintf(stderr, "lsh: allocation error\n");
-				exit(EXIT_FAILURE);
-			}
-		}
-
 		token = strtok(NULL, " \t\r\n\a");
 	}
-	token_array[position] = 0;
+	token_array[position] = 0;/** add sentinel value to know when array ends*/
   return (token_array);
+  /**
+   * One issue could be that you have to duplicate the string, because strtok
+   * works on the provided string, and if it can't modify it, it will dump.
+   */
 }
 int main(void)
 {
