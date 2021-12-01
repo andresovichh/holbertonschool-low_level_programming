@@ -44,13 +44,13 @@ int main(void)
 {
 	int i = 0;
 	char str[] = "string to tokenize";
-	char *toks;
+	char **toks;/** to store the return of tokenizer*/
 
-	while (tokenizer(str)[i + 2] != 0)
+	toks = tokenizer(str);
+	while (toks[i] != 0)
 	{
-		toks = tokenizer(str)[i];
 
-		printf("%s\n", toks);
+		printf("%s\n", toks[i]);
 		i++;
 	}
 	return (0);
