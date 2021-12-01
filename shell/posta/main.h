@@ -15,6 +15,7 @@
 #include <sys/stat.h>
 #include <sys/wait.h>
 #include <errno.h>
+#define BUFFER 1024
 char *_getenv(const char *name);
 extern char **environ;
 int **cmd_to_av(char *input_string);
