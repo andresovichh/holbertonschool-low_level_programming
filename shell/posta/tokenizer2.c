@@ -4,45 +4,55 @@
 
 #define LSH_TOK_BUFSIZE 64
 #define LSH_TOK_DELIM " \t\r\n\a"
-char **lsh_split_line(char *line)
+char **tokenizer(char *line)
 {
-	int bufsize = LSH_TOK_BUFSIZE, position = 0;
-	char **tokens = malloc(bufsize * sizeof(char *));
+	int bufsize = 1024, position = 0;
+	char **token_array;
 	char *token;
 
-	if (!tokens)
+	token_array = malloc(bufsize * sizeof(char *));
+
+	if (!token_array)
 	{
 		fprintf(stderr, "lsh: allocation error\n");
 		exit(EXIT_FAILURE);
 	}
 
-	token = strtok(line, LSH_TOK_DELIM);
+	token = strtok(line, " \t\r\n\a");
 	while (token != NULL)
 	{
-		tokens[position] = token;
+		token_array[position] = token;
 		position++;
 
 		if (position >= bufsize)
 		{
 			bufsize += LSH_TOK_BUFSIZE;
-			tokens = realloc(tokens, bufsize * sizeof(char *));
-			if (!tokens)
+			token_array = realloc(token_array, bufsize * sizeof(char *));
+			if (!token_array)
 			{
 				fprintf(stderr, "lsh: allocation error\n");
 				exit(EXIT_FAILURE);
 			}
 		}
 
-		token = strtok(NULL, LSH_TOK_DELIM);
+		token = strtok(NULL, " \t\r\n\a");
 	}
-	tokens[position] = NULL;
-  return (tokens);
+	token_array[position] = 0;
+  return (token_array);
 }
 int main(void)
 {
+	int i = 0;
 	char str[] = "string to tokenize";
+	char *toks;
 
-	printf("%s\n", lsh_split_line(str)[1]);
+	while (tokenizer(str)[i + 2] != 0)
+	{
+		toks = tokenizer(str)[i];
+
+		printf("%s\n", toks);
+		i++;
+	}
 	return (0);
 }
 
