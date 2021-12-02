@@ -18,6 +18,8 @@ int main(void)
 		if (input == NULL && errno == 0)
 		{
 			printf("CTRLD\n");
+			free(input);
+			free(toks);
 			return (0);
 		}
 		else if (input == NULL && errno != 0)
@@ -30,10 +32,18 @@ int main(void)
 		{
 			/** this should check if user types exit*/
 			if (strcmp(toks[i], "exit") == 0)
+			{
+				free(toks);
+				free(input);
 				return (0);
+			}
 			printf("position:%d string:%s\n", i, toks[i]);
 			if (strcmp(toks[i], "gout") == 0)
+			{
+				free(toks);
+				free(input);
 				status = 0;
+			}
 			i++;
 		}
 		free(input);
