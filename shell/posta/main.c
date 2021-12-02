@@ -10,21 +10,35 @@ int main(void)
 	int i = 0;
 	char **toks;
 	char *input;
+	int status;
 
-	input = _getline();
-	/** by checking if errrno == 0, we conclude it was EOF*/
-	if (input == NULL && errno == 0)
-	{
-		printf("CTRLD\n");
-		return (0);
-	}
-	toks = tokenizer(input);
-	while (toks[i])
-	{
-		printf("position:%d string:%s\n", i, toks[i]);
-		i++;
-	}
-	free(input);
-	free(toks);
+	do {
+		input = _getline();
+		/** by checking if errrno == 0, we conclude it was EOF*/
+		if (input == NULL && errno == 0)
+		{
+			printf("CTRLD\n");
+			return (0);
+		}
+		else if (input == NULL && errno != 0)
+		{
+			printf("Some error occurred");
+			return (1);
+		}
+		toks = tokenizer(input);
+		while (toks[i])
+		{
+			/** this should check if user types exit*/
+			if (strcmp(toks[i], "exit") == 0)
+				return (0);
+			printf("position:%d string:%s\n", i, toks[i]);
+			if (strcmp(toks[i], "gout") == 0)
+				status = 0;
+			i++;
+		}
+		free(input);
+		free(toks);
+	} while (status);
+
 	return (0);
 }
