@@ -19,8 +19,7 @@ new_node = malloc(sizeof(dlistint_t));/** second allocate memory to it*/
 /** check if it worked*/
 if (new_node == NULL)
 return (NULL);
-/** assign data to new node and next ptr to null*/
-new_node->n = n;
+new_node->n = n;/** assign data to new node and next ptr to null*/
 new_node->next = NULL;
 /** if empty list*/
 if (*head == NULL)
