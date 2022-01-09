@@ -13,13 +13,9 @@ dlistint_t *new_node;
 dlistint_t *tmp;
 
 tmp = *head;
-
-/** if no head, return NULL*/
-if (!head)
+if (!head)/** if no head, return NULL*/
 return (NULL);
-
-/** second allocate memory to it*/
-new_node = malloc(sizeof(dlistint_t));
+new_node = malloc(sizeof(dlistint_t));/** second allocate memory to it*/
 /** check if it worked*/
 if (new_node == NULL)
 return (NULL);
@@ -33,8 +29,6 @@ if (*head == NULL)
 new_node->prev = NULL;
 return (new_node);
 }
-
-
 /** the get to last node*/
 while (tmp->next != NULL)
 tmp = tmp->next;
