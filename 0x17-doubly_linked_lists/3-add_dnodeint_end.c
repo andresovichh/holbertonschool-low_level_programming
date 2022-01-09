@@ -39,5 +39,6 @@ return (new_node);
 while (tmp->next != NULL)
 tmp = tmp->next;
 
+tmp->next = new_node;
 
 }
