@@ -40,5 +40,6 @@ while (tmp->next != NULL)
 tmp = tmp->next;
 
 tmp->next = new_node;
-
+new_node->prev = tmp;
+return (new_node);
 }
