@@ -15,7 +15,6 @@ if (i == NULL)
 return (NULL);
 }
 i->n = n;/** insert data to the newly created node*/
-
 i->next = (*head);/** point next ptr to head*/
 i->prev = NULL;/** point prev ptr to NULL*/
 if ((*head) != NULL)
@@ -23,6 +22,5 @@ if ((*head) != NULL)
 (*head)->prev = i;
 }
 (*head) = i;
-
 return (i);
 }
