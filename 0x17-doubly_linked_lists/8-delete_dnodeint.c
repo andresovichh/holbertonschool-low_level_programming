@@ -24,5 +24,12 @@ if (tmp == *head)
 if (*head != NULL)
 (*head)->prev = NULL;
 }
+else
+{
+tmp->prev->next = tmp->next;
+if (tmp->next != NULL)
+tmp->next->prev = tmp->prev;
+}
+free(tmp);
 return (1);
 }
