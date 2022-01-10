@@ -20,7 +20,7 @@ return (NULL);
 idx--;
 }
 if (tmp->next == NULL)
-return (add_dnodeint_end(h,n));
+return (add_dnodeint_end(h, n));
 new = malloc(sizeof(dlistint_t));
 if (new == NULL)
 return (NULL);
