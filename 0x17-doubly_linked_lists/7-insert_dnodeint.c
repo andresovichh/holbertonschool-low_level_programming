@@ -2,7 +2,10 @@
 
 /**
  * insert_dnodeint_at_index - inserts node at index
- *
+ * @h: ptr to ptr to head
+ * @idx: where to add the node
+ * @n: data to add
+ * Return: addres of new node, or NULL
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
