@@ -12,15 +12,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 hash_node_t *a_node;
 
-
 if (ht == NULL || key == NULL || value == NULL)
 return (0);
-
 /** try to allocate mem to a node, exit if fail */
 a_node = malloc(sizeof(hash_node_t));
 if (!a_node)
 return (0);
-
 a_node->key = strdup(key);
 a_node->value = strdup(value);
 
@@ -35,7 +32,6 @@ return (1);
  * @ht: the hash table of the lists
  * @node: the linked list to add or update
  */
-
 void node_handler(hash_table_t *ht, hash_node_t *node)
 {
 /** getting the index & creating a *tmp */
