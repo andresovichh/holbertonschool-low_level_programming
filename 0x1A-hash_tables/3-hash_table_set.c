@@ -10,18 +10,18 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-/** create a node */
-hash_node_t *a_node;
+hash_node_t *new;
+char *value_copy;
+unsigned long int index, i;
 
-if (!key || !ht)
+if (ht == NULL || key == NULL || value == NULL)
 return (0);
 
-/** try to allocate mem for the node */
-a_node = malloc(sizeof(hash_node_t));
-if (a_node == NULL)
+value_copy = strdup(value);
+if (value_copy == NULL)
 return (0);
 
-a_node->key = strdup(key);
-a_node->value = strdup(value);
-return (1);
+index = key_index((const unsigned char *)key, ht->size);
+for (i = index; ht->array[i]; i++)
+
 }
