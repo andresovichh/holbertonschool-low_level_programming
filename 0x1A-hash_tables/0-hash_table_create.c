@@ -11,7 +11,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 hash_table_t *a_table;
 unsigned long int i = 0;
 
-if (size == 0)
+if (size == 0 || !size)
 return (NULL);
 
 /** 2. try to allocate memory */
