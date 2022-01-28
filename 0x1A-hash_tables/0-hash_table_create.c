@@ -10,7 +10,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 {
 /** 1. create the instance of the table */
 hash_table_t *a_table;
-unsigned int i = 0;
+unsigned long int i = 0;
 
 if (size == 0)
 return (NULL);
