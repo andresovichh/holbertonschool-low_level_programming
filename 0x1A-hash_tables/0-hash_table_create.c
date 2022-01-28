@@ -18,7 +18,7 @@ return (NULL);
 a_table = malloc(sizeof(hash_node_t));
 if (a_table == 0)
 {
-free (a_table);
+free(a_table);
 return (NULL);
 }
 
@@ -26,7 +26,7 @@ return (NULL);
 a_table->array = malloc(sizeof(hash_table_t *) * size);
 if (a_table->array == 0)
 {
-free (a_table->array);
+free(a_table->array);
 return (NULL);
 }
 a_table->size = size;
