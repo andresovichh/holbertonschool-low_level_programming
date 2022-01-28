@@ -1,12 +1,12 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_set - adds an element to the hash table 
- * 
- * @param ht:  the hash table you want to add or update the key/value to
- * @param key: the key 
- * @param value:  is the value associated with the key.
- * @return: 1 if succeed, 0 otherwise
+ * hash_table_set - adds an element to the hash table
+ *
+ * @ht:  the hash table you want to add or update the key/value to
+ * @key: the key
+ * @value:  is the value associated with the key.
+ * Return: 1 if succeed, 0 otherwise
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
@@ -33,7 +33,7 @@ return (1);
 /**
  * node_handler - handles a node
  * @ht: the hash table of the lists
- * @node: the linked list to add or update 
+ * @node: the linked list to add or update
  */
 
 void node_handler(hash_table_t *ht, hash_node_t *node)
@@ -46,7 +46,7 @@ hash_node_t *tmp = ht->array[i];
 if (ht->array[i] != NULL)
 {
 tmp = ht->array[i];
-while(tmp != NULL) /** walk the nodes*/
+while (tmp != NULL) /** walk the nodes*/
 {/** if there is a coincidence */
 if (strcmp(tmp->key, node->key) == 0)
 {
