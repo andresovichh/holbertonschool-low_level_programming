@@ -13,11 +13,19 @@ hash_table_t *a_table;
 /** 2. try to allocate memory */
 a_table = malloc(sizeof(hash_node_t));
 if (!a_table)
+{
 return (NULL);
+free (a_table);
+}
 a_table->size = size;
 /** malloc the hash_node_t array struct */
 a_table->array = malloc(sizeof(hash_table_t) * size);
 if (!a_table->array)
+{
 return (NULL);
+free (a_table->array);
+}
+free (a_table);
+free (a_table->array);
 return (a_table);
 }
