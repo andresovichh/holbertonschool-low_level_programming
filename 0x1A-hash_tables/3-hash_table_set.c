@@ -11,8 +11,7 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 hash_node_t *a_node;
-char *value_copy;
-unsigned long int index, i;
+
 
 if (ht == NULL || key == NULL || value == NULL)
 return (0);
@@ -27,7 +26,7 @@ a_node->value = strdup(value);
 
 node_handler(ht, a_node);
 
-
+return (1);
 }
 
 
@@ -40,7 +39,7 @@ node_handler(ht, a_node);
 void node_handler(hash_table_t *ht, hash_node_t *node)
 {
 /** getting the index & creating a *tmp */
-unsigned long int i = key_index(node->key, ht->size);
+unsigned long int i = key_index((const unsigned char *) node->key, ht->size);
 hash_node_t *tmp = ht->array[i];
 
 /** check if at last spoot */
