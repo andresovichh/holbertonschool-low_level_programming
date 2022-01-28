@@ -16,7 +16,7 @@ return (NULL);
 
 /** 2. try to allocate memory */
 a_table = malloc(sizeof(hash_node_t));
-if (a_table == 0)
+if (a_table == NULL)
 {
 free(a_table);
 return (NULL);
@@ -24,7 +24,7 @@ return (NULL);
 
 /** malloc the hash_node_t array struct */
 a_table->array = malloc(sizeof(hash_table_t *) * size);
-if (a_table->array == 0)
+if (a_table->array == NULL)
 {
 free(a_table->array);
 return (NULL);
