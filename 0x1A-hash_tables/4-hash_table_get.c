@@ -20,19 +20,20 @@ return (NULL);
 /** duplicate the key */
 a_key = strdup(key);
 /** get the index of the key we're looking for*/
-i = key_index((const unsigned char*) key, ht->size);
+i = key_index((const unsigned char *) key, ht->size);
 tmp = ht->array[i];
 
 while (tmp != NULL)
 {/** traverse the nodes*/
 if (strcmp(tmp->key, a_key) == 0)
-{
-    break;
+{/** if match, exit loop*/
+break;
 }
 tmp = tmp->next;
 }
 free(a_key);
-return (NULL);
+
+return (tmp->value);
 
 
 }
