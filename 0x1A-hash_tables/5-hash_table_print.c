@@ -28,5 +28,5 @@ tmp = tmp->next;
 }
 }
 }
-printf("}");
+printf("}\n");
 }
