@@ -36,5 +36,6 @@ free(node);
 node = tmp;
 }
 }
-
+free(ht->array);
+free(ht);
 }
