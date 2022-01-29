@@ -32,8 +32,8 @@ break;
 tmp = tmp->next;
 }
 free(a_key);
+if (tmp == NULL)
+return (NULL);
 
 return (tmp->value);
-
-
 }
