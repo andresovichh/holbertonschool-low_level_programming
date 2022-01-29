@@ -8,7 +8,7 @@ void hash_table_print(const hash_table_t *ht)
 {
 hash_node_t *tmp; /** a tmp to traverse */
 unsigned long int i = 0;
-
+printf("{");
 /** traverse the nodes */
 while (i < ht->size)
 {
