@@ -12,11 +12,13 @@ printf("{");
 /** traverse the nodes */
 while (i < ht->size)
 {
-tmp = ht->array[i];
+tmp = ht->array[i]; /** got to place i in array*/
 {
-while (tmp) /** walk untill null */
+while (tmp) /** walk nodes untill null */
 {
-printf("%s", tmp->key);
+printf("'%s': '%s'", tmp->key, tmp->value);
+if (ht->array[i] == NULL)
+printf(", ");
 /** check if next is null */
 if (ht->array[i +1] == NULL)
 break;
@@ -26,4 +28,5 @@ tmp = tmp->next;
 i++;
 }
 }
+printf("}");
 }
