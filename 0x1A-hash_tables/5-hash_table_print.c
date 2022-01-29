@@ -10,6 +10,9 @@ hash_node_t *tmp; /** a tmp to traverse */
 unsigned long int i = 0;
 char *comma;
 
+if (!ht)
+return;
+
 printf("{");
 comma = "";
 /** traverse the nodes */
