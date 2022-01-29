@@ -1,31 +1,28 @@
 #include "hash_tables.h"
 
 /**
- * @brief 
- * 
+ * hash_table_print - prints a hash table
+ * @ht: the hashtable
  */
 void hash_table_print(const hash_table_t *ht)
 {
 hash_node_t *tmp; /** a tmp to traverse */
 unsigned long int i = 0;
+char *comma;
+
 printf("{");
+comma = "";
 /** traverse the nodes */
-while (i < ht->size)
+for (i = 0; i < ht->size; i++)
 {
 tmp = ht->array[i]; /** got to place i in array*/
 {
-while (tmp) /** walk nodes untill null */
+while (tmp)
 {
-printf("'%s': '%s'", tmp->key, tmp->value);
-if (ht->array[i] == NULL)
-printf(", ");
-/** check if next is null */
-if (ht->array[i +1] == NULL)
-break;
-
+printf("%s'%s': '%s'", comma, tmp->key, tmp->value);
+comma = ", ";
 tmp = tmp->next;
 }
-i++;
 }
 }
 printf("}");
