@@ -15,7 +15,7 @@ char *a_key;
 
 /** try to malloc memory */
 tmp = malloc(sizeof(hash_node_t));
-if (!tmp)
+if (!tmp || !ht || !key)
 return (NULL);
 /** duplicate the key */
 a_key = strdup(key);
