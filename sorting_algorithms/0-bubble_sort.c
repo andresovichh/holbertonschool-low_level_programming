@@ -13,23 +13,30 @@ size_t i = 0;
 size_t newn = 0;
 int tmp = 0;
 size_t the_size = size;
-while ((size > 1))
+int swapped = 1;
+
+
+while (swapped)
 {
-newn = 0;
+swapped = 0;
 for (i = 1; i <= (size - 1) && array[i] != 0 ; i++)
 {
 /** printf("getting here");*/
 if (array[i - 1] > array[i])
 {
+
 tmp =  array[i - 1];
 array[i - 1] = array[i];
 array[i] = tmp;
-newn = i;
-}
 
-
-}
+swapped = 1;
 print_array(array, the_size);
-size = newn;
 }
+
+}
+
+}
+
+size = newn;
+
 }
