@@ -1,6 +1,5 @@
 #include "sort.h"
 
-
 /**
  * bubble_sort - Sorts array of ints in ascending order
  * @array: the array to be sorted
@@ -24,19 +23,13 @@ for (i = 1; i <= (size - 1) && array[i] != 0 ; i++)
 /** printf("getting here");*/
 if (array[i - 1] > array[i])
 {
-
 tmp =  array[i - 1];
 array[i - 1] = array[i];
 array[i] = tmp;
-
 swapped = 1;
 print_array(array, the_size);
 }
-
 }
-
 }
-
 size = newn;
-
 }
