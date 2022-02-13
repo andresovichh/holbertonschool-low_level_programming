@@ -8,8 +8,8 @@
  */
 void selection_sort(int *array, size_t size)
 {
-int tmp, ctr = 0;
-size_t i, j, jMin;
+int tmp;
+size_t i, j = 0, jMin;
 for (i = 0; i < size - 1; i++)
 {
 jMin = i;
@@ -23,8 +23,7 @@ jMin = j;
 }
 if (jMin != i)
 {
-ctr++;
-printf("ctr: %i\n", ctr);
+
 tmp = array[jMin];
 array[jMin] = array[i];
 array[i] = tmp;
